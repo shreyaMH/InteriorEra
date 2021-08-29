@@ -1,0 +1,303 @@
+
+@media (max-width:768px){
+    body{
+    line-spacing:0px;
+    font-size:2rem;
+    }
+    #navbar{
+display:inline-block;
+}
+#navbar ul li{
+display:block;
+}
+#navbar ul li a{
+padding:1rem 0;
+font-size:1rem;
+}
+
+#about,#designs,#service,#contact{
+margin-top:9rem;
+}
+#about .testimonials h2{
+font-size:1rem;
+}
+#about .testimonials .testimonial img{
+margin-top:1rem;
+}
+    #footer #int-contact{
+    font-size:1rem;
+    padding:0;
+    display:inline-block;
+    }
+    #footer{
+    font-size:1rem;
+    }
+    }
+
+
+
+@media (max-width:600px){
+    body{
+    letter-spacing:0px;
+    }
+    
+    #navbar{
+      
+    display:grid;
+    grid-template-columns:1fr;
+    justify-content:center;
+    
+      }
+
+
+#navbar h1{
+text-align:center;
+font-size:1.5rem;
+padding:.5rem;
+
+}
+      #navbar ul li a{
+      padding:0;
+      }
+    #navbar ul li a:hover,
+#navbar ul li a.current{
+    background:none;
+    color:skyblue;
+    
+    }
+    .menu-wrap{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1;
+    }
+   .menu-wrap .toggler{
+   display:inline;
+    position:absolute;
+    top:18px;
+    left:22px;
+    z-index:2;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    opacity:0;
+    padding:2rem;
+   
+    }
+   .menu-wrap .hamburger{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    height:20px;
+    width:30px;
+    padding:2rem;
+    background:var(--primary-color);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    }
+    /*Hamburger line*/
+    .menu-wrap .hamburger>div{
+    position:relative;
+    
+    background:white;
+    width:100%;
+    height:2px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    }
+    /*hamburger top and bottom line*/
+    .menu-wrap .hamburger>div:before,
+    .menu-wrap .hamburger>div:after{
+    content:"";
+    position:absolute;
+    z-index:1;
+    top:-10px;
+    left:0;
+    width:100%;
+    height:2px;
+    background:inherit;
+    }
+    /*Hamburger below line*/
+    .menu-wrap .hamburger>div:after{
+    top:10px;
+    }
+    
+    /*Toggle animation*/
+    .menu-wrap .toggler:checked + .hamburger>div{
+    transform:rotate(135deg);
+    }
+    
+    /*Turns line into X*/
+    .menu-wrap .toggler:checked + .hamburger>div:before,
+    .menu-wrap .toggler:checked + .hamburger>div:after
+    {
+    top:0;
+    transform:rotate(90deg);
+    }
+    /*Rotate on hover when checked*/
+    .menu-wrap .toggler:checked:hover + .hamburger>div{
+    transform:rotate(225deg);
+    }
+    
+    
+    .menu-wrap .menu{
+    position:fixed;
+    top:0;
+    left:0;
+    width:80%;
+    height:100%;
+    visibility:hidden;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    }
+    .menu-wrap .menu>div{
+    background:var(--primary-color);
+    
+    height:100%;
+    width:100%;
+    display:flex;
+   
+    justify-content:center;
+    align-items:flex-start;
+   transform:translateX(0);
+    
+    }
+    .menu-wrap .menu>div > div{
+    text-align:center;
+    }
+    .menu-wrap .menu>div> div >ul{
+    display:flex;
+    flex-direction:column;
+margin-top:5rem;
+    }
+    .menu-wrap .menu>div> div >ul li{
+    margin:1rem 0;
+    }
+ .menu-wrap .toggler:checked ~ .menu{
+ visibility:visible;
+ }
+ 
+ .menu-wrap .toggler:checked ~ .menu>div{
+ transform:translateX(1);
+ }
+
+#showcase{
+padding:0;
+}
+ 
+ #showcase p{
+font-size:16px;
+margin:0.5rem;
+}
+
+.large-text{
+font-size:1.5rem;
+padding:1rem 0;
+
+}
+.btn{
+      
+      margin-top:1rem;
+      padding:0.5rem 1rem;
+      transition:all 1s ease-in-out;
+border-radius:5px;
+font-size:1rem;
+margin:1rem;
+}
+/*Why*/
+#why{
+background:white;
+margin:1rem;
+padding:.5rem;
+font-size:.5rem;
+}
+#why-1 .container div{
+padding:.5rem;
+margin:.5rem;
+}
+#why-1 .container{
+display:grid;
+grid-template-columns:1fr;
+justify-content:center;
+font-size:.5rem;
+}
+#designs{
+margin:0;
+}
+#designs h2
+
+{
+font-size:1.5rem;
+}
+#designs .int-designs h3{
+font-size:1rem;
+padding:0;
+}
+#service{
+margin:2rem;
+}
+#service .container{
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-gap:1rem;
+font-size:.5rem;
+}
+ #service .large-text{
+padding:2rem 0;
+}
+#about{
+margin-top:4.5rem;
+}
+#about .int-about{
+
+font-size:.5rem;
+}
+#about .testimonials .testimonial{
+font-size:.5rem;
+}
+#about .testimonials .testimonial img{
+border-radius:50%;
+width:100%;
+margin:0;
+}
+
+#contact{
+margin-top:4.5rem;
+}
+#contact #form label{
+font-size:1rem;
+}
+#contact #form .form-group input,
+#contact #form .form-group textarea
+{
+
+font-size:1rem;
+width:80%;
+height:1.5rem;
+}
+#contact #form .form-group textarea{
+height:2rem;
+}
+#footer{
+font-size:.5rem;
+}
+#footer #int-contact{
+border:1px solid white;
+border-left:none;
+border-right:none;
+display:grid;
+grid-template-columns:repeat(1,1fr);
+justify-content:center;
+
+}
+#footer #int-contact #contact-info{
+font-size:.5rem;
+}
+}
